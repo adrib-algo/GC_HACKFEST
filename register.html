@@ -4,199 +4,12 @@
 <meta charset="UTF-8">
 <title>Hackathon Team Registration</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 
-<style>
-* {
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-}
-
-/* BODY */
-body {
-  margin: 0;
-  min-height: 100vh;
-  background: radial-gradient(circle at top left, #38bdf8, #0f172a 55%);
-}
-
-/* NAVBAR */
-nav {
-  width: 100%;
-  background: rgba(15, 23, 42, 0.95);
-  backdrop-filter: blur(10px);
-  padding: 18px 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-nav h2 {
-  margin: 0;
-  font-size: 22px;
-  color: #38bdf8;
-  letter-spacing: 1px;
-}
-
-nav .nav-links a {
-  color: #e5e7eb;
-  text-decoration: none;
-  margin-left: 30px;
-  font-weight: 500;
-  position: relative;
-}
-
-nav .nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0%;
-  height: 2px;
-  background: #38bdf8;
-  transition: width 0.3s ease;
-}
-
-nav .nav-links a:hover::after {
-  width: 100%;
-}
-
-/* PAGE WRAPPER (centers form) */
-.page-wrapper {
-  min-height: calc(100vh - 80px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 20px;
-}
-
-/* FORM CARD */
-form {
-  width: 100%;
-  max-width: 650px;
-  padding: 45px 55px;
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.97);
-  backdrop-filter: blur(12px);
-  box-shadow:
-    0 30px 60px rgba(0, 0, 0, 0.45),
-    inset 0 0 0 1px rgba(255,255,255,0.3);
-  animation: fadeUp 0.7s ease;
-}
-
-/* TITLE */
-h2 {
-  text-align: center;
-  margin-bottom: 35px;
-  font-size: 26px;
-  color: #0f172a;
-}
-
-/* LABELS */
-label {
-  display: block;
-  margin-top: 18px;
-  margin-bottom: 6px;
-  font-weight: 600;
-  color: #334155;
-}
-
-/* INPUTS */
-input, select {
-  width: 100%;
-  padding: 14px 16px;
-  border-radius: 12px;
-  border: 1.5px solid #cbd5f5;
-  font-size: 15px;
-  transition: 0.3s;
-}
-
-input:focus,
-select:focus {
-  border-color: #38bdf8;
-  box-shadow: 0 0 0 4px rgba(56,189,248,0.25);
-  outline: none;
-}
-
-/* DRIVE LINK */
-.drive-link {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 18px;
-  border-radius: 12px;
-  background: #e0f2fe;
-  color: #0284c7;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.drive-link:hover {
-  background: #38bdf8;
-  color: #fff;
-}
-
-/* BUTTON */
-button {
-  width: 100%;
-  margin-top: 35px;
-  padding: 16px;
-  border: none;
-  border-radius: 999px;
-  font-size: 17px;
-  font-weight: 700;
-  color: #fff;
-  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  transform: translateY(-3px);
-}
-
-/* ANIMATION */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* FOOTER */
-footer {
-  background: #0f172a;
-  color: #cbd5f5;
-  text-align: center;
-  padding: 18px;
-  font-size: 0.9rem;
-}
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  nav {
-    padding: 16px 25px;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  nav .nav-links a {
-    margin: 0 12px;
-  }
-
-  form {
-    padding: 35px 25px;
-  }
-}
-</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
   <h2>Hackathon 2026</h2>
   <div class="nav-links">
@@ -204,56 +17,241 @@ footer {
     <a href="problems.html">Problems</a>
     <a href="guidelines.html">Guidelines</a>
     <a href="register.html">Register</a>
-    <a href="contatct.html">Contact</a>
+    <a href="contact.html" class="active">Contact</a>
   </div>
 </nav>
 
-<!-- FORM SECTION -->
 <div class="page-wrapper">
+<form id="hackathonForm"
+      action="https://api.web3forms.com/submit"
+      method="POST">
 
-<form action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="4dc4401e-a4e8-4a74-a67d-f94a271e74b7">
+<input type="hidden" name="access_key" value="c02a2301-603e-4a43-b963-9b1bacedb034">
+<input type="checkbox" name="botcheck" style="display:none;">
 
-  <h2>Hackathon Team Registration</h2>
+<h2>Hackathon Team Registration</h2>
 
-  <label>Team Name</label>
-  <input type="text" name="team_name" required>
+<label>Team Name</label>
+<input type="text" name="team_name" required>
 
-  <label>Team Leader Name</label>
-  <input type="text" name="leader_name" required>
+<h3>Team Leader</h3>
 
-  <label>Leader Email</label>
-  <input type="email" name="leader_email" required>
+<label>Name</label>
+<input type="text" name="leader_name" required>
 
-  <label>Leader Phone</label>
-  <input type="tel" name="leader_phone" required>
+<label>Mobile</label>
+<input type="tel" name="leader_mobile" required>
 
-  <label>Member 1 Name</label>
-  <input type="text" name="member1">
+<label>Email</label>
+<input type="email" name="leader_email" required>
 
-  <label>Member 2 Name</label>
-  <input type="text" name="member2">
+<label>Semester</label>
+<!-- <input type="text" name="leader_semester" required> -->
+<select name="leader_semester" required>
+  <option value="">Select</option>
+  <option>2nd</option>
+  <option>4th</option>
+  <option>6th</option>
+</select>
 
-  <label>Select Problem Statement</label>
-  <select name="problem_statement" required>
-    <option value="">-- Select --</option>
-    <option value="PS01">PS01 – Smart Farming</option>
-    <option value="PS02">PS02 – Healthcare AI</option>
-    <option value="PS03">PS03 – Smart City</option>
-  </select>
+<label>Gender</label>
+<select name="leader_gender" required>
+  <option value="">Select</option>
+  <option>Male</option>
+  <option>Female</option>
+  <option>Other</option>
+</select>
 
-  <a href="https://drive.google.com" target="_blank" class="drive-link">
-    Upload PPT / Proposal (Drive Link)
-  </a>
+<h3>Team Member 1 (Female Mandatory)</h3>
 
-  <input type="checkbox" name="botcheck" style="display:none;">
-  <button type="submit">Submit Registration</button>
+<label>Name</label>
+<input type="text" name="member1_name" required>
+
+<label>Mobile</label>
+<input type="tel" name="member1_mobile" required>
+
+<label>Email</label>
+<input type="email" name="member1_email" required>
+
+<label>Semester</label>
+<!-- <input type="text" name="member1_semester" required> -->
+ <select name="member1_semester" required>
+  <option value="">Select</option>
+  <option>2nd</option>
+  <option>4th</option>
+  <option>6th</option>
+</select>
+
+<label>Gender</label>
+<select name="member1_gender" required>
+  <option value="Female">Female</option>
+</select>
+
+<h3>Team Members 2 – 5</h3>
+
+<label>Member 2 Name</label>
+<input type="text" name="member2_name" required>
+<label>Mobile</label>
+<input type="tel" name="member2_mobile" required>
+<label>Email</label>
+<input type="email" name="member2_email" required>
+<label>Semester</label>
+<!-- <input type="text" name="member2_semester" required> -->
+ <select name="member2_semester" required>
+  <option value="">Select</option>
+  <option>2nd</option>
+  <option>4th</option>
+  <option>6th</option>
+</select>
+<label>Gender</label>
+<select name="member2_gender" required>
+  <option value="">Select</option>
+  <option>Male</option>
+  <option>Female</option>
+  <option>Other</option>
+</select>
+
+<label>Member 3 Name</label>
+<input type="text" name="member3_name" required>
+<label>Mobile</label>
+<input type="tel" name="member3_mobile" required>
+<label>Email</label>
+<input type="email" name="member3_email" required>
+<label>Semester</label>
+<!-- <input type="text" name="member3_semester" required> -->
+ <select name="member3_semester" required>
+  <option value="">Select</option>
+  <option>2nd</option>
+  <option>4th</option>
+  <option>6th</option>
+</select>
+<label>Gender</label>
+<select name="member3_gender" required>
+  <option value="">Select</option>
+  <option>Male</option>
+  <option>Female</option>
+  <option>Other</option>
+</select>
+
+<label>Member 4 Name</label>
+<input type="text" name="member4_name" required>
+<label>Mobile</label>
+<input type="tel" name="member4_mobile" required>
+<label>Email</label>
+<input type="email" name="member4_email" required>
+<label>Semester</label>
+<!-- <input type="text" name="member4_semester" required> -->
+ <select name="member4_semester" required>
+  <option value="">Select</option>
+  <option>2nd</option>
+  <option>4th</option>
+  <option>6th</option>
+</select>
+<label>Gender</label>
+<select name="member4_gender" required>
+  <option value="">Select</option>
+  <option>Male</option>
+  <option>Female</option>
+  <option>Other</option>
+</select>
+
+<label>Member 5 Name</label>
+<input type="text" name="member5_name" required>
+<label>Mobile</label>
+<input type="tel" name="member5_mobile" required>
+<label>Email</label>
+<input type="email" name="member5_email" required>
+<label>Semester</label>
+<!-- <input type="text" name="member5_semester" required> -->
+ <select name="member5_semester" required>
+  <option value="">Select</option>
+  <option>2nd</option>
+  <option>4th</option>
+  <option>6th</option>
+</select>
+<label>Gender</label>
+<select name="member5_gender" required>
+  <option value="">Select</option>
+  <option>Male</option>
+  <option>Female</option>
+  <option>Other</option>
+</select>
+<label>Google Drive Link</label>
+<input type="text" name="drive_link" required>
+
+<button type="submit">Submit Registration</button>
+
 </form>
-
 </div>
-<!-- FOOTER -->
+
 <footer>
-  © 2026 Inter-College Hackathon | Organized by TechyHigh
+© 2026 Inter-College Hackathon
 </footer>
+
+<!-- EMAILJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+(function(){
+  emailjs.init("ALDiriLiDclp4utgV");
+})();
+</script>
+
+<script>
+document.getElementById("hackathonForm").addEventListener("submit", function () {
+
+  const params = {
+    team_name: this.team_name.value,
+
+    leader_name: this.leader_name.value,
+    leader_email: this.leader_email.value,
+    leader_mobile: this.leader_mobile.value,
+    leader_semester: this.leader_semester.value,
+    leader_gender: this.leader_gender.value,
+    // email: this.leader_email.value,
+
+    member1_name: this.member1_name.value,
+    member1_email: this.member1_email.value,
+    member1_mobile: this.member1_mobile.value,
+    member1_semester: this.member1_semester.value,
+
+    member2_name: this.member2_name.value,
+    member2_email: this.member2_email.value,
+    member2_mobile: this.member2_mobile.value,
+    member2_semester: this.member2_semester.value,
+
+    member3_name: this.member3_name.value,
+    member3_email: this.member3_email.value,
+    member3_mobile: this.member3_mobile.value,
+    member3_semester: this.member3_semester.value,
+
+    member4_name: this.member4_name.value,
+    member4_email: this.member4_email.value,
+    member4_mobile: this.member4_mobile.value,
+    member4_semester: this.member4_semester.value,
+
+    member5_name: this.member5_name.value,
+    member5_email: this.member5_email.value,
+    member5_mobile: this.member5_mobile.value,
+    member5_semester: this.member5_semester.value,
+
+    drive_link: this.drive_link.value
+  };
+
+  emailjs.send(
+    "service_c8olabx",      // ✅ your Service ID
+    "template_iwwl7mu",     // ❌ replace with real Template ID
+    params
+  )
+  .then(function () {
+    console.log("EmailJS: confirmation email sent");
+  })
+  .catch(function (error) {
+    console.error("EmailJS error:", error);
+  });
+
+});
+</script>
+
+
 </body>
 </html>
