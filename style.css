@@ -1,30 +1,23 @@
-/* =========================================
-   1. GLOBAL RESET & BASE
-   ========================================= */
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
+/* BODY (footer fix applied) */
 body {
+  margin: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: radial-gradient(circle at top left, #38bdf8, #0f172a 60%);
-  color: #0f172a;
-  line-height: 1.6;
+  background: radial-gradient(circle at top left, #38bdf8, #0f172a 55%);
 }
 
-/* =========================================
-   2. NAVIGATION (Shared)
-   ========================================= */
+/* ================= NAVBAR ================= */
 nav {
   width: 100%;
   background: rgba(15, 23, 42, 0.96);
   backdrop-filter: blur(12px);
-  padding: 1rem 5%;
+  padding: 16px 64px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,30 +27,31 @@ nav {
 }
 
 nav h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
   color: #38bdf8;
-  font-size: 1.4rem;
   letter-spacing: 1px;
 }
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 28px;
 }
 
 .nav-links a {
   color: #e5e7eb;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 15px;
   font-weight: 500;
   position: relative;
-  transition: color 0.3s ease;
 }
 
 .nav-links a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -4px;
+  bottom: -6px;
   width: 0%;
   height: 2px;
   background: #38bdf8;
@@ -74,11 +68,166 @@ nav h2 {
   width: 100%;
 }
 
-/* =========================================
-   3. HERO SECTION (Index Only)
-   ========================================= */
+/* Register */
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+form {
+  max-width: 800px;
+  width: 100%;
+  background: #fff;
+  padding: 45px 55px;
+  border-radius: 24px;
+}
+label {
+  margin-top: 15px;
+  display: block;
+  font-weight: 600;
+}
+input, select {
+  width: 100%;
+  padding: 14px;
+  margin-top: 6px;
+  border-radius: 12px;
+  border: 1.5px solid #cbd5f5;
+}
+button {
+  margin-top: 30px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ================= CONTENT ================= */
+.page-content {
+  flex: 1; /* pushes footer down */
+  padding: 40px 20px;
+}
+
+/* TITLE */
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 40px;
+  letter-spacing: 0.8px;
+}
+
+/* CONTACT CARD */
+.contact-card {
+  max-width: 700px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 24px;
+  padding: 40px 45px;
+  box-shadow: 0 25px 55px rgba(0,0,0,0.4);
+}
+
+/* TEXT */
+.contact-card h3 {
+  margin-top: 0;
+  color: #0f172a;
+  margin-bottom: 18px;
+}
+
+.contact-card p {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+/* CONTACT ITEMS */
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 15px;
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+}
+
+.contact-item span {
+  font-weight: 600;
+  color: #0284c7;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px 60px;
+}
+
+/* TITLE */
+.page-title {
+  text-align: center;
+  font-size: 32px;
+  color: #ffffff;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+/* SECTION CARD */
+.guideline-section {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px 32px;
+  margin-bottom: 28px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+
+.guideline-section h3 {
+  margin-top: 0;
+  color: #0f172a;
+  font-size: 22px;
+  margin-bottom: 12px;
+  border-left: 5px solid #38bdf8;
+  padding-left: 12px;
+}
+
+.guideline-section p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #475569;
+}
+
+.guideline-section ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.guideline-section ul li {
+  margin-bottom: 8px;
+  color: #475569;
+  line-height: 1.6;
+}
+/* TIMELINE */
+.timeline {
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.timeline p {
+  margin: 6px 0;
+  font-weight: 500;
+}
+
+/* hero */
 header {
-  height: 80vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,233 +235,326 @@ header {
   position: relative;
   overflow: hidden;
   background: linear-gradient(to right, #0f172a, #1e293b);
-  color: #fff;
 }
 
+/* ROUND LOGO WATERMARK */
 header::before {
   content: "";
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: 420px;
+  height: 420px;
   border-radius: 50%;
   background: url("college.jpeg") no-repeat center;
   background-size: cover;
-  opacity: 0.15;
+  opacity: 0.18;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-header h1 {
-  font-size: clamp(1.8rem, 5vw, 3rem);
-  margin-bottom: 15px;
-  text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+/* HERO CONTENT */
+header > div {
+  position: relative;
+  z-index: 1;
 }
 
+header h1 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 15px;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.7);
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #cbd5f5;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.7);
+}
+
+/* BUTTONS */
 .hero-buttons {
-  margin-top: 25px;
   display: flex;
-  gap: 15px;
+  gap: 18px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.btn, .btn-outline {
-  padding: 12px 28px;
+.btn {
+  background: #38bdf8;
+  color: #0f172a;
+  padding: 14px 32px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
 }
 
-.btn {
+.btn:hover {
+  background: #0ea5e9;
+  color: #fff;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #38bdf8;
+  padding: 14px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #38bdf8;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
   background: #38bdf8;
   color: #0f172a;
 }
 
-.btn-outline {
-  border: 2px solid #38bdf8;
-  color: #38bdf8;
-}
-
-/* =========================================
-   4. CONTENT LAYOUTS (Shared)
-   ========================================= */
-.page-content, .container {
-  flex: 1;
-  padding: 40px 5%;
-  max-width: 1100px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.section-title, .page-title {
+/* SECTIONS */
+section {
+  padding: 70px 15%;
   text-align: center;
-  font-size: clamp(1.5rem, 4vw, 2rem);
+  background: #fff;
+}
+
+section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  background: #f4f6fb;
+}
+
+.card {
+  background: #ffffff;
+  padding: 30px;
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h3 {
+  margin-bottom: 15px;
+}
+
+/* ================= CO-PATRONS ================= */
+.patrons-section {
+  background: #f8fafc;
+  padding: 80px 10%;
+}
+
+.patrons-section h2 {
+  font-size: 2.3rem;
+  margin-bottom: 50px;
+  color: #0f172a;
+}
+
+.patrons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+}
+
+.patron-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 35px 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.patron-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 55px rgba(0,0,0,0.18);
+}
+
+.patron-card img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #38bdf8;
+  margin-bottom: 20px;
+}
+
+.patron-card h3 {
+  font-size: 1.2rem;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.patron-card p {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+/* Problems */
+
+.page-content {
+  flex: 1; /* pushes footer to bottom */
+  padding: 40px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 30px;
   color: #ffffff;
   margin-bottom: 40px;
 }
 
-/* CARDS (General Styling) */
-.card-base, .contact-card, .guideline-section, .problem-item, .patron-card {
+.problem-list {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* PROBLEM ITEM */
+.problem-item {
   background: #ffffff;
   border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  padding: 25px;
-  margin-bottom: 20px;
-}
-
-/* =========================================
-   5. SPECIFIC COMPONENT STYLES
-   ========================================= */
-
-/* Feature Cards (Index) */
-.features {
+  padding: 26px 30px;
+  margin-bottom: 22px;
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-bottom: 60px;
-}
-
-.feature-card {
-  flex: 1 1 280px;
-  max-width: 350px;
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  text-align: center;
-}
-
-/* Patron Grid (Index) */
-.patrons-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.patron-card {
-  text-align: center;
-}
-
-.patron-card img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #38bdf8;
-  margin-bottom: 15px;
-}
-
-/* Registration Form */
-form {
-  background: #fff;
-  padding: clamp(20px, 5%, 45px);
-  border-radius: 24px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-
-input, select {
-  width: 100%;
-  padding: 12px;
-  border: 1.5px solid #cbd5f5;
-  border-radius: 10px;
-  font-size: 1rem;
-}
-
-/* Problem List & Modal */
-.problem-item {
-  display: flex;
-  gap: 20px;
+  gap: 22px;
   cursor: pointer;
   border-left: 6px solid #38bdf8;
-  transition: transform 0.2s;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+  transition: 0.3s;
 }
 
 .problem-item:hover {
-  transform: translateX(10px);
+  transform: translateY(-6px);
 }
 
 .problem-number {
-  min-width: 50px;
-  height: 50px;
+  min-width: 54px;
+  height: 54px;
+  border-radius: 14px;
   background: #38bdf8;
-  color: white;
+  color: #fff;
+  font-weight: 700;
   display: flex;
-  align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  font-weight: bold;
+  align-items: center;
 }
 
+.problem-content h3 {
+  margin: 0 0 8px;
+  font-size: 21px;
+}
+
+.problem-content p {
+  margin: 0;
+  color: #475569;
+}
+
+/* ================= MODAL ================= */
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.65);
   display: none;
   justify-content: center;
   align-items: center;
   z-index: 2000;
-  padding: 20px;
 }
 
-.modal.active { display: flex; }
+.modal.active {
+  display: flex;
+}
 
 .modal-box {
-  background: white;
+  background: #ffffff;
+  width: 90%;
+  max-width: 520px;
+  border-radius: 18px;
   padding: 30px;
-  border-radius: 15px;
-  max-width: 500px;
-  width: 100%;
   position: relative;
+  animation: scaleUp 0.3s ease;
 }
 
-/* =========================================
-   6. FOOTER
-   ========================================= */
+@keyframes scaleUp {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #64748b;
+}
+
+.modal h3 {
+  margin-top: 0;
+  color: #0f172a;
+}
+
+.modal p {
+  margin: 8px 0;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.modal-desc-title {
+  margin-top: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+
+/* FOOTER */
 footer {
   background: #0f172a;
   color: #cbd5f5;
   text-align: center;
-  padding: 20px;
+  padding: 18px;
   font-size: 0.9rem;
-  margin-top: auto;
 }
 
-/* =========================================
-   7. RESPONSIVE QUERIES
-   ========================================= */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   nav {
+    padding: 14px 22px;
     flex-direction: column;
-    padding: 15px;
+    gap: 12px;
   }
 
   .nav-links {
-    margin-top: 15px;
-    gap: 12px;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 18px;
   }
 
-  .nav-links a {
-    font-size: 0.85rem;
+  .section-title {
+    font-size: 24px;
   }
 
-  .problem-item {
+  .contact-card {
+    padding: 30px 22px;
+  }
+
+  .contact-item {
     flex-direction: column;
-    gap: 10px;
+    gap: 6px;
   }
 }

@@ -11,13 +11,13 @@
 <body>
 
 <nav>
-  <h2>Hackathon 2026</h2>
+  <h2>GCH 2026</h2>
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="problems.html">Problems</a>
     <a href="guidelines.html">Guidelines</a>
-    <a href="register.html">Register</a>
-    <a href="contact.html" class="active">Contact</a>
+    <a href="register.html" class="active">Register</a>
+    <a href="contact.html">Contact</a>
   </div>
 </nav>
 
@@ -33,6 +33,15 @@
 
 <label>Team Name</label>
 <input type="text" name="team_name" required>
+
+<label>Problem Statement</label>
+<select id="problem_statement" name="problem_statement" required>
+  <option value="">Select</option>
+  <option>PS01</option>
+  <option>PS02</option>
+  <option>PS03</option>
+  <option>PS04</option>
+</select>
 
 <h3>Team Leader</h3>
 
@@ -176,8 +185,6 @@
   <option>Female</option>
   <option>Other</option>
 </select>
-<label>Google Drive Link</label>
-<input type="text" name="drive_link" required>
 
 <button type="submit">Submit Registration</button>
 
@@ -185,7 +192,7 @@
 </div>
 
 <footer>
-© 2026 Inter-College Hackathon
+  © 2026 Inter-College Hackathon | Organized by TechyHigh
 </footer>
 
 <!-- EMAILJS -->
@@ -201,6 +208,7 @@ document.getElementById("hackathonForm").addEventListener("submit", function () 
 
   const params = {
     team_name: this.team_name.value,
+    problem_statement: this.problem_statement.value,
 
     leader_name: this.leader_name.value,
     leader_email: this.leader_email.value,
@@ -213,28 +221,33 @@ document.getElementById("hackathonForm").addEventListener("submit", function () 
     member1_email: this.member1_email.value,
     member1_mobile: this.member1_mobile.value,
     member1_semester: this.member1_semester.value,
+    member1_gender: this.member1_gender.value,
 
     member2_name: this.member2_name.value,
     member2_email: this.member2_email.value,
     member2_mobile: this.member2_mobile.value,
     member2_semester: this.member2_semester.value,
+    member2_gender: this.member2_gender.value,  
 
     member3_name: this.member3_name.value,
     member3_email: this.member3_email.value,
     member3_mobile: this.member3_mobile.value,
     member3_semester: this.member3_semester.value,
+    member3_gender: this.member3_gender.value,    
 
     member4_name: this.member4_name.value,
     member4_email: this.member4_email.value,
     member4_mobile: this.member4_mobile.value,
     member4_semester: this.member4_semester.value,
+    member4_gender: this.member4_gender.value,    
 
     member5_name: this.member5_name.value,
     member5_email: this.member5_email.value,
     member5_mobile: this.member5_mobile.value,
     member5_semester: this.member5_semester.value,
+    member5_gender: this.member5_gender.value,
 
-    drive_link: this.drive_link.value
+    // drive_link: this.drive_link.value
   };
 
   emailjs.send(
