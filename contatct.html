@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Us – Hackathon 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* BODY (footer fix applied) */
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at top left, #38bdf8, #0f172a 55%);
+}
+
+/* ================= NAVBAR ================= */
+nav {
+  width: 100%;
+  background: rgba(15, 23, 42, 0.96);
+  backdrop-filter: blur(12px);
+  padding: 16px 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #38bdf8;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #38bdf8;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* ================= CONTENT ================= */
+.page-content {
+  flex: 1; /* pushes footer down */
+  padding: 40px 20px;
+}
+
+/* TITLE */
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 40px;
+  letter-spacing: 0.8px;
+}
+
+/* CONTACT CARD */
+.contact-card {
+  max-width: 700px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 24px;
+  padding: 40px 45px;
+  box-shadow: 0 25px 55px rgba(0,0,0,0.4);
+}
+
+/* TEXT */
+.contact-card h3 {
+  margin-top: 0;
+  color: #0f172a;
+  margin-bottom: 18px;
+}
+
+.contact-card p {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+/* CONTACT ITEMS */
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 15px;
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+}
+
+.contact-item span {
+  font-weight: 600;
+  color: #0284c7;
+}
+
+/* FOOTER */
+footer {
+  background: #0f172a;
+  color: #cbd5f5;
+  text-align: center;
+  padding: 18px;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav {
+    padding: 14px 22px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .contact-card {
+    padding: 30px 22px;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h2>Hackathon 2026</h2>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="problems.html">Problems</a>
+    <a href="guidelines.html">Guidelines</a>
+    <a href="register.html">Register</a>
+    <a href="contact.html" class="active">Contact</a>
+  </div>
+</nav>
+
+<!-- CONTENT -->
+<div class="page-content">
+
+  <h2 class="section-title">Contact Information</h2>
+
+  <div class="contact-card">
+    <h3>Hackathon 2026 Support</h3>
+    <p>
+      For any queries related to registration, problem statements,
+      submission guidelines, or event schedule, please contact us
+      using the information below.
+    </p>
+
+    <div class="contact-item">
+      <span>Email</span>
+      <div>hackathon2026@example.com</div>
+    </div>
+
+    <div class="contact-item">
+      <span>Phone</span>
+      <div>+91 98765 43210</div>
+    </div>
+
+    <div class="contact-item">
+      <span>Institution</span>
+      <div>Swamiji & Netaji Institute, India</div>
+    </div>
+
+    <div class="contact-item">
+      <span>Support Hours</span>
+      <div>9:00 AM – 6:00 PM (IST)</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Inter-College Hackathon | Organized by TechyHigh
+</footer>
+
+</body>
+</html>
