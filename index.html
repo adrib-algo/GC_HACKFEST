@@ -33,6 +33,30 @@
       <a href="register.html" class="btn">Register Now</a>
       <a href="problems.html" class="btn-outline">Problem Statements</a>
     </div>
+    <div>
+    <div class="status-badge">
+    <span class="dot"></span>
+    Registration Open on 13/02/2026
+  </div>
+    <div class="countdown" id="countdown">
+    <div>
+      <span id="days">00</span>
+      <small>Days</small>
+    </div>
+    <div>
+      <span id="hours">00</span>
+      <small>Hours</small>
+    </div>
+    <div>
+      <span id="minutes">00</span>
+      <small>Minutes</small>
+    </div>
+    <div>
+      <span id="seconds">00</span>
+      <small>Seconds</small>
+    </div>
+  </div>
+  </div>
   </div>
 </header>
 
@@ -40,8 +64,7 @@
 <section>
   <h2>Why Participate?</h2>
   <p>
-    Showcase your skills, solve real-world problems, and compete with
-    talented students from different colleges. Inspired by
+    G C HackFest is designed to bridge the gap between academic learning and real-world problem-solving, preparing students for prestigious competitions like
     <strong>Smart India Hackathon (SIH)</strong>.
   </p>
 </section>
@@ -68,23 +91,66 @@
 
   <div class="patrons-grid">
     <div class="patron-card">
-      <img src="patron1.jpg" alt="Organizer">
-      <h3>Dr. Sukanta Majumdar</h3>
-      <p>Hon’ble Minister of State for Education</p>
+      <img src="Afroz_Img.png" alt="Organizer">
+      <h3>Afroz Middya</h3>
+      <p>Department BCA, George College<br>Leader Team TechyHigh</p>
     </div>
 
     <div class="patron-card">
-      <img src="patron2.jpg" alt="Organizer">
-      <h3>Jayant Chaudhary</h3>
-      <p>Hon’ble Minister of State for Education</p>
+      <img src="Khushi_Img.png" alt="Organizer">
+      <h3>Khushi Jaiswal</h3>
+      <p>Department BCA, George College<br>Member Team TechyHigh</p>
     </div>
 
     <div class="patron-card">
-      <img src="patron3.jpg" alt="Organizer">
-      <h3>Shri Vineet Joshi</h3>
-      <p>Hon’ble Secretary, Higher Education</p>
+      <img src="Pritam_img.png" alt="Organizer">
+      <h3>Pritam Deb</h3>
+      <p>Department BCA, George College<br> Member Team TechyHigh</p>
     </div>
-  </div>
+    </div>
+
+
+      <div class="patrons-grid">
+    <div class="patron-card">
+      <img src="Adrib_img.jpeg" alt="Organizer">
+      <h3>Adrib Das</h3>
+      <p>Department BCA, George College<br>Member Team TechyHigh</p>  
+    </div>
+    
+    <div class="patron-card">
+      <img src="Samoy_img.jpeg" alt="Organizer">
+      <h3>Samoy Das</h3>
+      <p>Department BCA, George College<br>Member Team TechyHigh</p>
+    </div>
+
+    <div class="patron-card">
+      <img src="Bishakah_img.jpeg" alt="Organizer">
+      <h3>Bishakha Dey</h3>
+      <p>Department BCA, George College<br>Member Team TechyHigh</p>
+    </div>
+</section>
+<!-- jury panel -->
+<section class="patrons-section">
+  <h2>JURY PANEL</h2>
+
+  <div class="patrons-grid">
+    <div class="patron-card">
+      <img src="MDsir_img.png" alt="Organizer">
+      <h3>Prof. Manas Kumar Deb</h3>
+      <p>Associate Professor <br> Dept. of Computer Applications</p>
+    </div>
+
+    <div class="patron-card">
+      <img src="Aditosir_img.png" alt="Organizer">
+      <h3>Prof. Aditya Bhattacharya</h3>
+      <p>Assistant Professor <br> Dept. of Computer Applications</p>
+    </div>
+
+    <div class="patron-card">
+      <img src="DNsir_img.jpg" alt="Organizer">
+      <h3>Prof. Debasish Nandi</h3>
+      <p>Assistant Professor <br> Dept. of Computer Applications</p>
+    </div>
 </section>
 
 <!-- FOOTER -->
@@ -93,4 +159,29 @@
 </footer>
 
 </body>
+<script>
+  const targetDate = new Date("2026-02-13T09:00:00").getTime();
+
+  const timer = setInterval(() => {
+    const now = new Date().getTime();
+    const diff = targetDate - now;
+
+    if (diff < 0) {
+      clearInterval(timer);
+      document.getElementById("countdown").innerHTML = "🚀 Hackathon Started!";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+  }, 1000);
+</script>
+
 </html>
