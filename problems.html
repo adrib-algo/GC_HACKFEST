@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Problem Statements</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <title>Problem Statements</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav>
+<!-- NAVBAR (sample) -->
+<nav class="navbar">
   <h2>GCH 2026</h2>
   <div class="nav-links">
-    <a href="index.html">Home</a>
+     <a href="index.html">Home</a>
     <a href="problems.html" class="active">Problems</a>
     <a href="guidelines.html">Guidelines</a>
     <a href="register.html">Register</a>
@@ -22,57 +21,382 @@
   </div>
 </nav>
 
-<!-- CONTENT -->
+<!-- PAGE CONTENT -->
 <div class="page-content">
   <h2 class="section-title">Problem Statements</h2>
 
-  <div class="problem-list">
+<div class="problem-list">
 
-    <div class="problem-item" onclick="openModal('PS01','Smart Farming','Agriculture & AI','Use AI and IoT to improve crop yield, optimize irrigation, and reduce water usage through intelligent decision-making.')">
-      <div class="problem-number">PS01</div>
+<!-- ================= PS01 ================= -->
+<div class="problem-item" onclick="openModal(
+  'PS01',
+  'Al-Based Crop Recommendation for Farmers',
+  'Agriculture, FoodTech & Rural Development',
+  `The objective is to create an AI-driven decision support system that determines real-time soil properties (pH, moisture, nutrient content) based on satellite data (e.g., Soil Grids, Bhuvan APIs) or IoT sensors. The system must also account for localised weather forecasts, past crop rotation data to preserve soil fertility, and existing market demand and price trends obtained through APIs or scraping agri-market websites.
+
+A machine learning model will provide the most appropriate crops for specified conditions, forecasting yield, profit margins, and sustainability scores. The solution should comprise a mobile application with a simple multilingual interface where farmers can enter or retrieve relevant data, see recommendations, and operate offline in low-connectivity regions.`
+)">
+  <div class="problem-number">PS01</div>
+  <div class="problem-content">
+    <h3>Al-Based Crop Recommendation for Farmers</h3>
+    <p>Agriculture, FoodTech & Rural Development</p>
+  </div>
+</div>
+
+<!-- ================= PS02 ================= -->
+<!-- PS02 -->
+<div class="problem-item" onclick="openModal(
+  'PS02',
+  'AI enabled cyber incident & safety web portal for defence.',
+  'Blockchain & Cybersecurity',
+  `Background
+1.1. In the evolving threat landscape, cyber adversaries are increasingly focusing on the personal devices and digital footprints of defence personnel, their families, and ex-servicemen.
+1.2. These individuals constitute prime and high-value targets; exploitation of their personal communications, social interactions, or financial activity can escalate into espionage, honeytraps, identity compromise, or targeted malware intrusions.
+1.3. At present, complaints are routed through the National Cyber Crime Reporting Portal (NCRP), which is overloaded with civilian cases.
+1.4. As the NCRP does not accord any priority to defence-related complaints, incidents with potential national security implications may remain undetected or delayed in response, thereby increasing operational risk.
+1.5. A dedicated AI-driven cyber incident portal is therefore required to ensure faster detection, timely triage, and controlled escalation for defence-linked cases.
+
+Problem Description
+2.1. The proposed solution is an AI-enabled Defence Cyber Incident & Safety Portal, designed exclusively for serving personnel, their families, and veterans.
+2.2. The portal must serve as a secure intake, triage, and alerting mechanism for cyber complaints with a direct linkage to CERT-Army.
+2.3. The system should:-
+2.3.1. Accept multi-format forensic samples (suspicious text messages, URLs, images, audio, video, and files).
+2.3.2. Analyze inputs using AI/ML models to identify malicious content, espionage patterns, or targeted threat campaigns.
+2.3.3. Provide real-time alerts and recommended mitigation steps to the complainant.
+2.3.4. Generate segregated, priority- and risk-wise lists of incidents for CERT-Army, enabling swift and structured response.
+2.3.5 Maintain role-based access controls, strict audit trails, and compliance with defence data-security norms.`
+)">
+  <div class="problem-number">PS02</div>
+  <div class="problem-content">
+    <h3>AI enabled cyber incident & safety web portal for defence.</h3>
+    <p>Blockchain & Cybersecurity</p>
+  </div>
+</div>
+
+
+<!-- ================= PS03 ================= -->
+<!-- PS03 -->
+<div class="problem-item" onclick="openModal(
+  'PS03',
+  'Temple & Pilgrimage Crowd Management (Somnath, Dwarka, Ambaji, Pavagadh)',
+  'Heritage & Culture',
+  `Currently, crowd management in pilgrimage sites is handled through manual monitoring, local police deployment, barricades, and traditional queue systems. These approaches often fall short during peak seasons when lakhs of devotees gather simultaneously. Key issues include:
+▪ Overcrowding & Queue Management – Long waiting times, lack of real-time queue visibility, and bottlenecks during entry/exit.
+▪ Safety & Emergency Response – Risk of stampedes, medical emergencies, and insufficient early warning mechanisms.
+▪ Traffic & Mobility Challenges – Congested approach roads, parking shortages, and inefficient flow of vehicles.
+▪ Pilgrim Guidance & Communication – Limited digital tools to provide real-time updates on waiting times, temple darshan slots, or emergency alerts.
+▪ Resource Optimization – Lack of AI-driven tools for predicting peak crowds and deploying security/medical staff accordingly.
+▪ Inclusivity & Accessibility – Inadequate solutions for elderly, women, children, and differently-abled devotees.
+
+Without integrated smart systems, it becomes difficult to balance religious traditions, safety, and modern-day visitor expectations.`
+)">
+  <div class="problem-number">PS03</div>
+  <div class="problem-content">
+    <h3>Temple & Pilgrimage Crowd Management</h3>
+    <p>Heritage & Culture</p>
+  </div>
+</div>
+
+<!-- ================= PS04 ================= -->
+<!-- PS04 -->
+<div class="problem-item" onclick="openModal(
+  'PS04',
+  'Digital Health Record Management System for migrant workers in Kerala aligned with sustainable development goals.',
+  'MedTech / BioTech / HealthTech',
+  `Kerala hosts a significant migrant population lacking comprehensive health record systems. These individuals often serve as a carrier for infectious diseases, posing serious public health risks to local communities. A dedicated software solution for maintaining migrant health records would support SDG achievement, prevent disease transmission and enhance public health surveillance and assist in elimination of diseases while ensuring fair and impartial healthcare access.`
+)">
+  <div class="problem-number">PS04</div>
+  <div class="problem-content">
+    <h3>Digital Health Record Management System</h3>
+    <p>MedTech / BioTech / HealthTech</p>
+  </div>
+</div>
+
+
+<!-- ================= PS05 ================= -->
+<div class="problem-item" onclick="openModal(
+'PS05',
+'Loan Utilization Tracking via Mobile',
+'Smart Automation',
+`Background
+Field verification of loan utilization is expensive, slow, and prone to errors.
+
+Challenge
+• Develop a mobile app for beneficiaries to upload geo-tagged, time-stamped photos/videos of assets purchased with loan funds, validated by AI.
+• Mobile number–based login for beneficiaries.
+• App must have facility for State Agency/Bank to enter data of those beneficiaries who have taken a loan.
+
+Constraints
+• Must work offline with later sync.
+• Allow State Agency officers to review and approve remotely.
+
+Impact Goal
+Achieve measurable reductions in fraud, asset diversion, and misreporting through AI-powered detection, leading to faster disbursement cycles, stronger beneficiary trust, and better compliance with scheme guidelines.`
+)">
+  <div class="problem-number">PS05</div>
+  <div class="problem-content">
+    <h3>Loan Utilization Tracking via Mobile</h3>
+    <p>Smart Automation</p>
+  </div>
+</div>
+
+<!-- ================= PS06 ================= -->
+<!-- PS06 -->
+<div class="problem-item" onclick="openModal(
+  'PS06',
+  'Smart Classroom & Timetable Scheduler',
+  'Smart Education',
+  `The current scheduling mechanism in most higher education institutes/colleges relies on manual input via spreadsheets or basic tools. These fail to account for real-time availability of faculty, room capacity, teaching load norms, subject combinations, and student preferences. A solution is required that will accommodate the various parameters required for scheduling classes for UG and PG students and return an optimized timetable ensuring:
+• Maximized utilization of classrooms and laboratories
+• Minimized workload on faculty members and students
+• Achievement of required learning outcomes
+
+Key Parameters
+
+The following parameters can be taken into account as variables for creating optimized timetables:
+- Number of classrooms available
+- Number of batches of students
+- Number of subjects to be taught in a particular semester
+- Names of subjects
+- Maximum number of classes per day
+- Number of classes to be conducted for a subject per week / per day
+- Number of faculties available for different subjects
+- Average number of leaves a faculty member takes in a month
+- Special classes that have fixed slots in timetable
+
+Students may also consider additional variables that may help in effective timetable preparation.`
+)">
+  <div class="problem-number">PS06</div>
+  <div class="problem-content">
+    <h3>Smart Classroom & Timetable Scheduler</h3>
+    <p>Smart Education</p>
+  </div>
+</div>
+
+
+<!-- ================= PS07 ================= -->
+<!-- PS07 -->
+<div class="problem-item" onclick="openModal(
+  'PS07',
+  'Language Agnostic Chatbot',
+  'Smart Education',
+  `Background:
+Campus offices answer hundreds of repetitive queries—fee deadlines, scholarship forms, timetable changes—often from students more comfortable in Hindi or other regional languages. Long queues and communication gaps strain both staff and learners.
+
+Description:
+While answers reside in circulars and PDFs, students prefer conversational guidance. A multilingual chatbot that understands Hindi, English, and an additional local language can deflect routine inquiries, freeing staff for complex tasks. Modern conversational AI services offer drag-and-drop interfaces. Key requirements include accurate intent recognition, context management across multiple turns, fallback to human contact when necessary, and daily conversation logs for continuous improvement. Embedding the chatbot on the college website and popular messaging platforms maximises reach. Crucially, the solution must respect privacy, ensure response accuracy, and remain maintainable by student volunteers after the hackathon concludes. By focusing on content curation and user-centric design, participants can deliver high impact solution quickly.`
+)">
+  <div class="problem-number">PS07</div>
+  <div class="problem-content">
+    <h3>Language Agnostic Chatbot</h3>
+    <p>Smart Education</p>
+  </div>
+</div>
+
+
+<!-- ================= PS08 ================= -->
+<div class="problem-item" onclick="openModal(
+'PS08',
+'Smart Room Allocation System for Examination Management',
+'Smart Education',
+`During examination periods, colleges face challenges in allocating rooms efficiently.
+
+The solution should automate room allocation based on roll numbers, departments, semesters, and capacity, support faculty workflows, export data, and ensure clarity for students.
+
+Expected outcomes include faster allocation, reduced workload, and efficient utilization of infrastructure.`
+)">
+  <div class="problem-number">PS08</div>
+  <div class="problem-content">
+    <h3>Smart Room Allocation System</h3>
+    <p>Smart Education</p>
+  </div>
+</div>
+
+<!-- ================= PS09 ================= -->
+<div class="problem-item" onclick="openModal(
+      'PS09',
+      'Student Admission Process Management Application (Multi-Platform)',
+      'Smart Education',
+      `Background
+The student admission process in most colleges is still partially or fully manual, involving repetitive form filling, physical document submission, long queues, and frequent errors. This results in inefficiency for both students and administrative staff.
+
+With increasing student intake, there is a need for a centralized, secure, and platform-independent admission management system.
+
+Problem Description
+Colleges follow a two-phase admission process:
+Phase 1 – Student Information Collection
+Phase 2 – Document Submission & Verification
+
+The objective is to design and develop a Student Admission Process Management Application that works seamlessly across Android, iOS, and Windows platforms.
+
+System Overview
+The system should include:
+1) Student Panel
+2) Admin Panel
+
+Student Panel Features:
+- Secure authentication
+- Course-wise admission flow
+- Phase-wise progress tracking
+- Document uploads
+
+Admin Panel Features:
+- Student management
+- Document verification
+- Data export (Excel, Word, PDF)
+- Progress monitoring
+
+Expected Impact
+- Faster admission process
+- Reduced administrative workload
+- Improved student experience
+- Better transparency and tracking
+
+Important Note
+A fully deployed system is not required. A functional prototype demonstrating the complete workflow is sufficient.`
+    )">
+      <div class="problem-number">PS09</div>
       <div class="problem-content">
-        <h3>Smart Farming</h3>
-        <p>AI-based agriculture solutions</p>
+        <h3>Student Admission Process Management Application</h3>
+        <p>Smart Education</p>
       </div>
     </div>
 
-    <div class="problem-item" onclick="openModal('PS02','Healthcare AI','Healthcare & ML','Build machine learning models for early disease prediction, diagnosis assistance, and smart healthcare monitoring systems.')">
-      <div class="problem-number">PS02</div>
-      <div class="problem-content">
-        <h3>Healthcare AI</h3>
-        <p>AI-powered healthcare innovation</p>
-      </div>
+<!-- ================= PS10 ================= -->
+<div class="problem-item" onclick="openModal(
+'PS10',
+'Student Innovation: Swadeshi for Atmanirbhar Bharat',
+'Student Innovation',
+`Developing solutions, keeping in mind the need to enhance the primary sector of India`
+)">
+  <div class="problem-number">PS10</div>
+  <div class="problem-content">
+    <h3>Student Innovation: Swadeshi for Atmanirbhar Bharat</h3>
+    <p>Student Innovation</p>
+  </div>
+</div>
+
+<!-- ================= PS11 ================= -->
+<div class="problem-item" onclick="openModal(
+  'PS11',
+  'Real-Time Public Transport Tracking for Small Cities',
+  'Transportation & Logistics',
+  `In small cities and tier-2 towns, public transport systems lack real-time tracking, causing inconvenience to commuters who face unpredictable bus schedules. This leads to overcrowding, wasted time, and reduced reliance on public transport. The problem is acute in cities with growing populations but limited digital infrastructure for transport management.
+
+Impact / Why this problem needs to be solved
+
+Over 60% of commuters in small cities face delays due to lack of real-time information, reducing public transport usage and increasing private vehicle dependency, which worsens traffic and pollution. A solution would enhance commuter experience and promote sustainable transport.
+
+Expected Outcomes
+
+• A mobile app or web platform integrating GPS-based real-time tracking of buses.
+• Display estimated arrival times and route information.
+• Optimized for low-bandwidth environments to ensure accessibility in smaller towns.
+
+Relevant Stakeholders / Beneficiaries
+
+• Commuters
+• Local transport authorities
+• Municipal corporations
+
+Supporting Data
+
+• Urban Mobility India Report 2024, emphasizing transport inefficiencies in tier-2 cities.`
+)">
+  <div class="problem-number">PS11</div>
+  <div class="problem-content">
+    <h3>Real-Time Public Transport Tracking for Small Cities</h3>
+    <p>Transportation & Logistics</p>
+  </div>
+</div>
+
+
+<!-- ================= PS12 ================= -->
+<div class="problem-item" onclick="openModal(
+  'PS12',
+  'Development of a Smart Digital Platform to Promote Eco & Cultural Tourism in India',
+  'Travel & Tourism',
+  `Background
+India is home to a vast and diverse range of eco-tourism destinations, cultural heritage sites, tribal traditions, historical landmarks, and natural landscapes spread across its states and union territories. From forests, waterfalls, and hill regions to heritage towns, tribal villages, and spiritual centers, the country possesses immense tourism potential.
+
+Despite this richness, many eco-tourism and cultural destinations remain under-promoted and under-visited due to fragmented digital presence, lack of reliable information, limited visibility of local experiences, and unorganized travel and hospitality services—especially in non-metro and rural regions.
+
+Description
+Tourists often struggle to find authentic, trustworthy, and consolidated information related to eco and cultural tourism destinations across India. Information about local transportation, accommodations, seasonal attractions, cultural events, community-led experiences, and verified local guides is scattered or unavailable.
+
+At the same time, local artisans, tribal communities, homestay owners, eco-tourism operators, and small service providers who could benefit directly from tourism are often excluded from mainstream digital platforms. This results in lost economic opportunities for local communities and limits the growth of responsible and sustainable tourism.
+
+There is a strong need for a centralized, smart digital platform that promotes eco and cultural tourism across India by providing reliable destination information, enhancing tourist experience, and digitally connecting local communities and service providers. The platform should encourage responsible travel, cultural preservation, community participation, and sustainable tourism development at a national scale.`
+)">
+  <div class="problem-number">PS12</div>
+  <div class="problem-content">
+    <h3>Development of a Smart Digital Platform to Promote Eco & Cultural Tourism in India</h3>
+    <p>Travel & Tourism</p>
+  </div>
+</div>
+
+
+<!-- ================= PS13 ================= -->
+<div class="problem-item" onclick="openModal(
+  'PS13',
+  'Smart Traffic Management Systern for Urban Congestion',
+  'Transportation & Logistics',
+  `Design an AI-based traffic management system to optimize signal timings and reduce congestion in urban areas. The system should analyze real-time traffic data from cameras and IoT sensors to predict and mitigate bottlenecks.`
+)">
+  <div class="problem-number">PS13</div>
+  <div class="problem-content">
+    <h3>Smart Traffic Management Systern for Urban Congestion</h3>
+    <p>Transportation & Logistics</p>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+<!-- BIG MODAL -->
+<div class="big-modal" id="problemModal">
+  <div class="big-modal-box">
+
+    <div class="big-modal-header">
+      <h2>Problem Statement Details</h2>
+      <span class="big-modal-close" onclick="closeModal()">×</span>
     </div>
 
-    <div class="problem-item" onclick="openModal('PS03','Smart City','Urban & Sustainability','Develop AI-powered solutions to improve traffic management, energy efficiency, public safety, and urban sustainability.')">
-      <div class="problem-number">PS03</div>
-      <div class="problem-content">
-        <h3>Smart City</h3>
-        <p>Urban technology & sustainability</p>
-      </div>
+    <div class="big-modal-body">
+      <table class="ps-table">
+        <tr>
+          <th>Problem ID</th>
+          <td id="modalId"></td>
+        </tr>
+        <tr>
+          <th>Problem Title</th>
+          <td id="modalTitle"></td>
+        </tr>
+        <tr>
+          <th>Theme</th>
+          <td id="modalTheme"></td>
+        </tr>
+        <tr>
+          <th>Description</th>
+          <td>
+            <div id="modalDesc" class="ps-desc"></div>
+          </td>
+        </tr>
+      </table>
     </div>
 
   </div>
 </div>
 
-<!-- MODAL -->
-<div class="modal" id="problemModal">
-  <div class="modal-box">
-    <span class="modal-close" onclick="closeModal()">×</span>
-    <h3 id="modalTitle"></h3>
-    <p><strong>Problem ID:</strong> <span id="modalId"></span></p>
-    <p><strong>Theme:</strong> <span id="modalTheme"></span></p>
-    <h4 class="modal-desc-title">Description</h4>
-    <p id="modalDesc"></p>
-  </div>
-</div>
-
+<!-- JS -->
 <script>
 function openModal(id, title, theme, desc) {
   document.getElementById("modalId").innerText = id;
   document.getElementById("modalTitle").innerText = title;
   document.getElementById("modalTheme").innerText = theme;
   document.getElementById("modalDesc").innerText = desc;
+
   document.getElementById("problemModal").classList.add("active");
 }
 
@@ -80,11 +404,6 @@ function closeModal() {
   document.getElementById("problemModal").classList.remove("active");
 }
 </script>
-
-<!-- FOOTER -->
-<footer>
-  © 2026 Inter-College Hackathon | Organized by TechyHigh
-</footer>
 
 </body>
 </html>
