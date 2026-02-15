@@ -395,7 +395,7 @@ header p {
 .status-badge .dot {
   width: 10px;
   height: 10px;
-  background: #38bdf8;
+  background: #f83838;
   border-radius: 50%;
   box-shadow: 0 0 8px #38bdf8;
   animation: pulse 1.5s infinite;
@@ -795,4 +795,5 @@ footer {
     gap: 6px;
     align-items: flex-start; /* Better alignment for stacked contact details */
   }
+
 }
